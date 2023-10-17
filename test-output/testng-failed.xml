@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="ok(failed)" parallel="tests">
+    <parameter name="bro" value="chrome"/>
+    <classes>
+      <class name="testng.suma">
+        <methods>
+          <include name="bb2"/>
+        </methods>
+      </class> <!-- testng.suma -->
+    </classes>
+  </test> <!-- ok(failed) -->
+  <test thread-count="5" name="okay(failed)" parallel="tests">
+    <parameter name="bro" value="edge"/>
+    <classes>
+      <class name="testng.suma">
+        <methods>
+          <include name="dd4"/>
+          <include name="bb2"/>
+        </methods>
+      </class> <!-- testng.suma -->
+    </classes>
+  </test> <!-- okay(failed) -->
+  <test thread-count="5" name="done(failed)" parallel="tests">
+    <parameter name="bro" value="fire"/>
+    <classes>
+      <class name="testng.suma">
+        <methods>
+          <include name="dd4"/>
+          <include name="aa1" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testng.suma -->
+    </classes>
+  </test> <!-- done(failed) -->
+</suite> <!-- Failed suite [Suite] -->

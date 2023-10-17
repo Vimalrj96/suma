@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>TestNG:  done</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>done</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Sep 22 13:56:07 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>192 seconds (192018 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testng.suma.aa1()'><b>aa1</b><br>Test class: testng.suma<br>Parameters: fire</td>
+<td><div><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: org.apache.hc.client5.http.HttpHostConnectException: Connect to https://raw.githubusercontent.com:443 [raw.githubusercontent.com/49.44.79.236, raw.githubusercontent.com/2405:200:1607:2820:41:0:0:36] failed: Connection timed out: connect
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1423)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1439)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1416)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:419)
+	at testng.suma.aa1(suma.java:40)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to https://raw.githubusercontent.com:443 [raw.githubusercontent.com/49.44.79.236, raw.githubusercontent.com/2405:200:1607:2820:41:0:0:36] failed: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.lambda$connectSocket$0(SSLConnectionSocketFactory.java:232)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:231)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:181)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:162)
+	at io.github.bonigarcia.wdm.WebDriverManager.openGitHubConnection(WebDriverManager.java:1607)
+	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromGitHub(WebDriverManager.java:1621)
+	at io.github.bonigarcia.wdm.managers.FirefoxDriverManager.getDriverUrls(FirefoxDriverManager.java:102)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1444)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1279)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1198)
+	... 25 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace479491784", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace479491784'><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: org.apache.hc.client5.http.HttpHostConnectException: Connect to https://raw.githubusercontent.com:443 [raw.githubusercontent.com/49.44.79.236, raw.githubusercontent.com/2405:200:1607:2820:41:0:0:36] failed: Connection timed out: connect
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1423)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1439)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1416)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:419)
+	at testng.suma.aa1(suma.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to https://raw.githubusercontent.com:443 [raw.githubusercontent.com/49.44.79.236, raw.githubusercontent.com/2405:200:1607:2820:41:0:0:36] failed: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.lambda$connectSocket$0(SSLConnectionSocketFactory.java:232)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:231)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:181)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:162)
+	at io.github.bonigarcia.wdm.WebDriverManager.openGitHubConnection(WebDriverManager.java:1607)
+	at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromGitHub(WebDriverManager.java:1621)
+	at io.github.bonigarcia.wdm.managers.FirefoxDriverManager.getDriverUrls(FirefoxDriverManager.java:102)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1444)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1279)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1198)
+	... 25 more
+</pre></div></td>
+<td>170</td>
+<td>testng.suma@50b494a6</td></tr>
+<tr>
+<td title='testng.suma.dd4()'><b>dd4</b><br>Test class: testng.suma</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.all({By.xpath: //*[@aria-label=&apos;+&apos;],By.xpath: //button[contains(@class,&apos;scout-element__counter-button--add&apos;)]})
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.support.pagefactory.ByAll.findElement(ByAll.java:58)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:136)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at org.frameBase.FrameWork.buttonclick(FrameWork.java:75)
+	at testng.suma.dd4(suma.java:111)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1446774695", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1446774695'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.all({By.xpath: //*[@aria-label=&apos;+&apos;],By.xpath: //button[contains(@class,&apos;scout-element__counter-button--add&apos;)]})
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.support.pagefactory.ByAll.findElement(ByAll.java:58)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:136)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at org.frameBase.FrameWork.buttonclick(FrameWork.java:75)
+	at testng.suma.dd4(suma.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>20</td>
+<td>testng.suma@50b494a6</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testng.suma.bb2()'><b>bb2</b><br>Test class: testng.suma</td>
+<td></td>
+<td>0</td>
+<td>testng.suma@50b494a6</td></tr>
+</table><p>
+</body>
+</html>
